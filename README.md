@@ -1,0 +1,88 @@
+# meok-omnibus-tracker-mcp
+
+**The live source of truth for the EU AI Act Digital Omnibus delay.**
+
+Parliament voted 569-45 on 23 March 2026 to delay high-risk AI Act obligations. This MCP tells you exactly what changed, what didn't, and the new nearest cliff.
+
+By [MEOK AI Labs](https://meok.ai).
+
+## Why this exists
+
+Every compliance team is asking the same three questions this week:
+1. "Did EVERYTHING get pushed to 2027?" (no — see below)
+2. "What's the actual nearest deadline I have to hit?"
+3. "Is the GPAI Code of Practice still in force?" (yes)
+
+This MCP returns the live status per provision so you don't get surprised.
+
+## What changed (TL;DR)
+
+| Provision | Before | After |
+|---|---|---|
+| Article 5 prohibitions | 2 Feb 2025 | **UNCHANGED — LIVE** |
+| Article 4 AI literacy | 2 Feb 2025 | **UNCHANGED — LIVE** |
+| GPAI obligations (Art 51-55) | 2 Aug 2025 | **UNCHANGED — LIVE** |
+| Penalty regime (Art 99) | 2 Aug 2025 | **UNCHANGED — LIVE** |
+| **Watermarking (Art 50)** | 2 Aug 2026 | **2 Nov 2026 ← new nearest cliff** |
+| High-risk Annex III (Art 6-49) | 2 Aug 2026 | **2 Dec 2027** (delayed 16 mo) |
+| High-risk Annex I (products) | 2 Aug 2027 | **2 Aug 2028** (delayed 12 mo) |
+| Article 71 EU database | 2 Aug 2026 | **2 Dec 2027** |
+| Article 73 incident reporting | 2 Aug 2026 | **2 Dec 2027** |
+| Article 27 FRIA | 2 Aug 2026 | **2 Dec 2027** |
+
+**Trilogue is LIVE.** Status will change again as the Council and Commission negotiate. Re-check weekly.
+
+## Tools
+
+- `get_provision_status(provision_key)` — per-provision deep-dive
+- `nearest_deadline(include_related=True)` — what you must hit FIRST (includes DORA / NIS2 BSI / Belgian audit deadlines that compliance teams confuse for AI Act)
+- `what_changed_summary()` — one-screen executive briefing
+- `sign_status_attestation(entity, audit_date)` — Pro: signed audit-evidence cert that you knew the deadline state on date X
+
+## Install
+
+```bash
+pip install meok-omnibus-tracker-mcp
+```
+
+## Claude Desktop
+
+```json
+{
+  "mcpServers": {
+    "omnibus": { "command": "meok-omnibus-tracker-mcp" }
+  }
+}
+```
+
+## Tiers
+
+- **Free** — unlimited (this is the lead-magnet MCP)
+- **Pro £199/mo** — signed status attestations + Slack webhook on every official update — [subscribe](https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836)
+- **Enterprise £1,499/mo** — multi-tenant + custom monitoring + SIEM push — [subscribe](https://buy.stripe.com/4gM9AV80kaEG0ZT42k8k837)
+
+## Sources
+
+- European Parliament press release, 23 March 2026 (vote 569-45-23) — https://www.europarl.europa.eu/news/en/press-room/20260323IPR38829/
+- A&O Shearman analysis, "Digital Omnibus on AI: what is really on the table"
+- OneTrust analysis, "How the EU Digital Omnibus reshapes AI Act timelines"
+- Global Policy Watch, "MEPs adopt joint position on Digital Omnibus on AI"
+
+## Related MEOK MCPs
+
+- [`eu-ai-act-compliance-mcp`](https://pypi.org/project/eu-ai-act-compliance-mcp/) — full compliance audit
+- [`meok-attestation-verify`](https://pypi.org/project/meok-attestation-verify/) — verify any MEOK signed cert
+
+## License
+
+MIT — MEOK AI Labs, 2026.
+
+---
+
+## Distribution channels
+
+- **PyPI**: `pip install meok-omnibus-tracker-mcp` (this package)
+- **Apify Store** (Pay-Per-Event): https://apify.com/knowing_yucca/meok-omnibus-tracker
+- **GitHub** (source): https://github.com/CSOAI-ORG/MEOK-LABS/tree/main/mcps/meok-omnibus-tracker-mcp
+- **Sponsor**: https://github.com/sponsors/CSOAI-ORG · [Pro £79/mo →](https://buy.stripe.com/eVq9AV4O87sudMF42k8k839)
+
