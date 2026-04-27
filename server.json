@@ -3,7 +3,7 @@
   "name": "io.github.CSOAI-ORG/meok-omnibus-tracker-mcp",
   "description": "EU AI Act + GDPR + DORA Digital Omnibus tracker — by MEOK AI Labs. Ships with HMAC-signed compliance attestations verifiable via meok-attestation-api.",
   "status": "active",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "url": "https://github.com/CSOAI-ORG/meok-omnibus-tracker-mcp",
     "source": "github"
@@ -14,7 +14,7 @@
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "meok-omnibus-tracker-mcp",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       }
