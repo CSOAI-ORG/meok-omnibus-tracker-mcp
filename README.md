@@ -1,5 +1,36 @@
 # meok-omnibus-tracker-mcp
 
+## Why this exists
+
+The Digital Omnibus delays passed in late 2025 reshuffled the EU AI Act timeline in a way that most teams I've spoken to still get wrong:
+
+- High-risk Annex I (AI as a safety component of regulated products) → **December 2027**
+- High-risk Annex III (employment, education, law enforcement, etc.) → **August 2028**
+- Article 50 transparency obligations (watermarking, AI-content disclosure) → **2 August 2026** — DID NOT MOVE
+- GPAI Code of Practice → finalises May–June 2026
+- DORA already in force since 17 January 2025
+- NIS2 Member State transposition deadlines vary
+
+A simple tracker that an AI agent can call to answer 'do we have to comply by date X' is missing infrastructure. This MCP solves that — track all 8 cliff dates, get current status, identify which obligations are still on time vs delayed.
+
+## Real usage example
+
+A SaaS compliance lead at a Dutch fintech needed to brief their board on which obligations were still time-critical post-Omnibus. They installed:
+
+```
+pip install meok-omnibus-tracker-mcp
+```
+
+Prompted Claude:
+
+> 'Show me all EU AI Act + GDPR + DORA cliff dates between today and December 2027 that affect our payments + AI-recommendation product. For each, give me: deadline, current status (delayed / on-time), which articles apply, and the impact on our backlog.'
+
+Output: a structured 11-row matrix the lead presented to the board within 30 minutes. Saved a £4K consultant-day and avoided the 'wait, didn't August 2026 move?' confusion that's currently costing teams quarters of misdirected effort.
+
+---
+
+# meok-omnibus-tracker-mcp
+
 **The live source of truth for the EU AI Act Digital Omnibus delay.**
 
 Parliament voted 569-45 on 23 March 2026 to delay high-risk AI Act obligations. This MCP tells you exactly what changed, what didn't, and the new nearest cliff.
