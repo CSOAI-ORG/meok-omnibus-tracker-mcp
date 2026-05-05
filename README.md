@@ -1,12 +1,17 @@
 # meok-omnibus-tracker-mcp
 
+[![PyPI version](https://img.shields.io/pypi/v/meok-omnibus-tracker-mcp)](https://pypi.org/project/meok-omnibus-tracker-mcp/)
+[![PyPI downloads](https://img.shields.io/pypi/dw/meok-omnibus-tracker-mcp)](https://pypistats.org/packages/meok-omnibus-tracker-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
 ## Why this exists
 
 The Digital Omnibus delays passed in late 2025 reshuffled the EU AI Act timeline in a way that most teams I've spoken to still get wrong:
 
-- High-risk Annex I (AI as a safety component of regulated products) → **December 2027**
-- High-risk Annex III (employment, education, law enforcement, etc.) → **August 2028**
-- Article 50 transparency obligations (watermarking, AI-content disclosure) → **2 August 2026** — DID NOT MOVE
+- High-risk Annex III (employment, education, law enforcement, etc.) → **2 December 2027**
+- High-risk Annex I (AI as a safety component of regulated products) → **2 August 2028**
+- Article 50 transparency obligations (watermarking, AI-content disclosure) → **2 November 2026**
 - GPAI Code of Practice → finalises May–June 2026
 - DORA already in force since 17 January 2025
 - NIS2 Member State transposition deadlines vary
