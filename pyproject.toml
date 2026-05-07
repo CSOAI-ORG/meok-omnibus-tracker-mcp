@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "meok-omnibus-tracker-mcp"
-version = "1.0.5"
+version = "1.0.6"
 description = "EU AI Act Digital Omnibus tracker MCP. Live source of truth for the EU AI Act delays following Parliament's 569-45 vote on 23 March 2026 — high-risk Annex III now 2 Dec 2027, Annex I now 2 Aug 2028, watermarking (Art 50) now 2 Nov 2026 (the new nearest cliff), Article 5 prohibitions + GPAI obligations + penalty regime UNCHANGED. Per-provision queryable status. Free tier — pure lead capture for Pro signed status attestations. By MEOK AI Labs."
 license = {file = "LICENSE"}
 readme = "README.md"
