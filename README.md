@@ -1,3 +1,7 @@
+[![meok-omnibus-tracker-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/meok-omnibus-tracker-mcp)](https://pypi.org/project/meok-omnibus-tracker-mcp/)
+
 [![meok-omnibus-tracker-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp)
 
 # meok-omnibus-tracker-mcp
