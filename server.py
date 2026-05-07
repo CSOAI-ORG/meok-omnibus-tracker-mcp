@@ -244,6 +244,22 @@ def get_provision_status(provision_key: str = "", api_key: str = "") -> str:
       gpai_obligations_art_51_55, high_risk_annex_iii, high_risk_annex_i,
       art_71_eu_database_registration, art_73_serious_incident_reporting,
       penalties_art_99, ai_office_governance, art_27_fria
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -276,7 +292,24 @@ def get_provision_status(provision_key: str = "", api_key: str = "") -> str:
 def nearest_deadline(include_related: bool = True, api_key: str = "") -> str:
     """Return the NEAREST remaining EU AI Act deadline (and optionally related
     DORA/NIS2/BSI deadlines that compliance teams confuse for AI Act). Sorted by
-    earliest first."""
+    earliest first.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
@@ -330,7 +363,24 @@ def nearest_deadline(include_related: bool = True, api_key: str = "") -> str:
 
 @mcp.tool()
 def what_changed_summary(api_key: str = "") -> str:
-    """One-screen executive summary of the Digital Omnibus delay — DELAYED vs UNCHANGED."""
+    """One-screen executive summary of the Digital Omnibus delay — DELAYED vs UNCHANGED.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
@@ -371,7 +421,23 @@ def sign_status_attestation(
 ) -> str:
     """Generate a cryptographically signed attestation snapshotting the state of EU
     AI Act provisions as of `audit_date_utc`. Pro/Enterprise. Useful for audit
-    evidence that says "we knew which deadlines applied to us on date X"."""
+    evidence that says "we knew which deadlines applied to us on date X".
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
@@ -432,6 +498,21 @@ def generate_status_html(filename_hint: str = "omnibus_status_report.html", api_
     a procurement-grade artefact you can attach to RFPs / audit responses.
 
     Returns: {filename, html, base64_pdf_if_available, instructions}
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need to assess, audit, or verify compliance
+        requirements. Ideal for gap analysis, readiness checks, and generating
+        compliance documentation.
+
+    When NOT to use:
+        Do not use as a substitute for qualified legal counsel. This tool
+        provides technical compliance guidance, not legal advice.
     """
     import base64 as _b64
     now_iso = datetime.now(timezone.utc).isoformat()
