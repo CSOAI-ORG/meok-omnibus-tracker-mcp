@@ -123,3 +123,4 @@ MIT — MEOK AI Labs, 2026.
 - **Apify Store** (Pay-Per-Event): https://apify.com/knowing_yucca/meok-omnibus-tracker
 - **GitHub** (source): https://github.com/CSOAI-ORG/MEOK-LABS/tree/main/mcps/meok-omnibus-tracker-mcp
 - **Sponsor**: https://github.com/sponsors/CSOAI-ORG · [Pro £79/mo →](https://buy.stripe.com/eVq9AV4O87sudMF42k8k839)
+<!-- mcp-name: io.github.CSOAI-ORG/meok-omnibus-tracker-mcp -->
