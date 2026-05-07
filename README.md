@@ -1,3 +1,5 @@
+[![meok-omnibus-tracker-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp)
+
 # meok-omnibus-tracker-mcp
 
 [![PyPI version](https://img.shields.io/pypi/v/meok-omnibus-tracker-mcp)](https://pypi.org/project/meok-omnibus-tracker-mcp/)
@@ -121,4 +123,3 @@ MIT — MEOK AI Labs, 2026.
 - **Apify Store** (Pay-Per-Event): https://apify.com/knowing_yucca/meok-omnibus-tracker
 - **GitHub** (source): https://github.com/CSOAI-ORG/MEOK-LABS/tree/main/mcps/meok-omnibus-tracker-mcp
 - **Sponsor**: https://github.com/sponsors/CSOAI-ORG · [Pro £79/mo →](https://buy.stripe.com/eVq9AV4O87sudMF42k8k839)
-
