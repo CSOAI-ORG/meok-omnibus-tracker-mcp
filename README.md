@@ -1,45 +1,3 @@
-[![meok-omnibus-tracker-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/meok-omnibus-tracker-mcp)](https://pypi.org/project/meok-omnibus-tracker-mcp/)
-
-[![meok-omnibus-tracker-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/meok-omnibus-tracker-mcp)
-
-# meok-omnibus-tracker-mcp
-
-[![PyPI version](https://img.shields.io/pypi/v/meok-omnibus-tracker-mcp)](https://pypi.org/project/meok-omnibus-tracker-mcp/)
-[![PyPI downloads](https://img.shields.io/pypi/dw/meok-omnibus-tracker-mcp)](https://pypistats.org/packages/meok-omnibus-tracker-mcp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-## Why this exists
-
-The Digital Omnibus delays passed in late 2025 reshuffled the EU AI Act timeline in a way that most teams I've spoken to still get wrong:
-
-- High-risk Annex III (employment, education, law enforcement, etc.) → **2 December 2027**
-- High-risk Annex I (AI as a safety component of regulated products) → **2 August 2028**
-- Article 50 transparency obligations (watermarking, AI-content disclosure) → **2 November 2026**
-- GPAI Code of Practice → finalises May–June 2026
-- DORA already in force since 17 January 2025
-- NIS2 Member State transposition deadlines vary
-
-A simple tracker that an AI agent can call to answer 'do we have to comply by date X' is missing infrastructure. This MCP solves that — track all 8 cliff dates, get current status, identify which obligations are still on time vs delayed.
-
-## Real usage example
-
-A SaaS compliance lead at a Dutch fintech needed to brief their board on which obligations were still time-critical post-Omnibus. They installed:
-
-```
-pip install meok-omnibus-tracker-mcp
-```
-
-Prompted Claude:
-
-> 'Show me all EU AI Act + GDPR + DORA cliff dates between today and December 2027 that affect our payments + AI-recommendation product. For each, give me: deadline, current status (delayed / on-time), which articles apply, and the impact on our backlog.'
-
-Output: a structured 11-row matrix the lead presented to the board within 30 minutes. Saved a £4K consultant-day and avoided the 'wait, didn't August 2026 move?' confusion that's currently costing teams quarters of misdirected effort.
-
----
-
 # meok-omnibus-tracker-mcp
 
 **The live source of truth for the EU AI Act Digital Omnibus delay.**
@@ -110,6 +68,12 @@ pip install meok-omnibus-tracker-mcp
 - OneTrust analysis, "How the EU Digital Omnibus reshapes AI Act timelines"
 - Global Policy Watch, "MEPs adopt joint position on Digital Omnibus on AI"
 
+## Full Compliance Platform
+
+The Omnibus tracker is free. The full platform is **[councilof.ai](https://councilof.ai)** — EU AI Act, DORA, NIS2, CRA, CSRD compliance automation from £29/mo.
+
+→ **[Get started at councilof.ai](https://councilof.ai)**
+
 ## Related MEOK MCPs
 
 - [`eu-ai-act-compliance-mcp`](https://pypi.org/project/eu-ai-act-compliance-mcp/) — full compliance audit
@@ -117,14 +81,6 @@ pip install meok-omnibus-tracker-mcp
 
 ## License
 
-MIT — MEOK AI Labs, 2026.
+MIT — [MEOK AI Labs](https://meok.ai), 2026.
 
----
-
-## Distribution channels
-
-- **PyPI**: `pip install meok-omnibus-tracker-mcp` (this package)
-- **Apify Store** (Pay-Per-Event): https://apify.com/knowing_yucca/meok-omnibus-tracker
-- **GitHub** (source): https://github.com/CSOAI-ORG/MEOK-LABS/tree/main/mcps/meok-omnibus-tracker-mcp
-- **Sponsor**: https://github.com/sponsors/CSOAI-ORG · [Pro £79/mo →](https://buy.stripe.com/eVq9AV4O87sudMF42k8k839)
 <!-- mcp-name: io.github.CSOAI-ORG/meok-omnibus-tracker-mcp -->
