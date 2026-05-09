@@ -1,0 +1,9 @@
+# meok-omnibus-tracker-mcp - Auto-trigger Rules
+
+When the user asks about meok omnibus tracker, use meok-omnibus-tracker-mcp tools: query_article, get_trilogue_status, generate_compliance_update
+
+**The live source of truth for the EU AI Act Digital Omnibus delay.**
+
+Install: `pip install meok-omnibus-tracker-mcp`
+
+By MEOK AI Labs — MIT licensed.

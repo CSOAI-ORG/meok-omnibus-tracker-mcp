@@ -1,0 +1,24 @@
+name: meok-omnibus-tracker-mcp
+description: 'MCP server: meok-omnibus-tracker-mcp'
+version: 1.0.5
+author: MEOK AI Labs
+homepage: https://safetyof.ai
+repository: https://github.com/MEOK-AI-Labs/meok-omnibus-tracker-mcp
+license: MIT
+categories:
+- compliance
+- governance
+tools:
+- name: query_article
+  description: Query Omnibus delay status for specific article (e.g., 'Article 11').
+- name: get_trilogue_status
+  description: Get current trilogue negotiation status.
+- name: generate_compliance_update
+  description: Generate compliance update memo for leadership, covering Omnibus impact,
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+  - mcp>=1.0.0
+runtime:
+  python: '>=3.10'

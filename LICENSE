@@ -1,6 +1,10 @@
 MIT License
 
+<<<<<<< HEAD
 Copyright (c) 2026 CSOAI LTD / MEOK AI Labs
+=======
+Copyright (c) 2026 MEOK AI Labs (Nicholas Templeman)
+>>>>>>> bd9beb4 (fix(entry-point): correct console script to use server:main)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

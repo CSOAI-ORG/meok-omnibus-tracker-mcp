@@ -1,0 +1,22 @@
+{
+  "name": "meok-omnibus-tracker-mcp",
+  "title": "Meok Omnibus Tracker Mcp",
+  "description": "EU Digital Omnibus AI Act tracker - Track delay status by article. First-mover advantage for SEO + brand.",
+  "version": "1.1.4",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "query_article"
+    },
+    {
+      "name": "get_trilogue_status"
+    },
+    {
+      "name": "generate_compliance_update"
+    }
+  ]
+}

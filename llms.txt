@@ -1,28 +1,30 @@
-# Meok Omnibus Tracker MCP
-
-> EU AI Act + GDPR + DORA Digital Omnibus tracker — track all 8 cliff dates, 14 article changes, an...
-
-`meok-omnibus-tracker-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# meok-omnibus-tracker-mcp
+# **The live source of truth for the EU AI Act Digital Omnibus delay.**
 
 ## Install
-
 ```bash
 pip install meok-omnibus-tracker-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx meok-omnibus-tracker-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-See the package README for the full tool list: https://pypi.org/project/meok-omnibus-tracker-mcp/
+### `query_article`
+Query Omnibus delay status for specific article (e.g., 'Article 11').
 
-## Links
+### `get_trilogue_status`
+Get current trilogue negotiation status.
 
-- Source: https://github.com/CSOAI-ORG/meok-omnibus-tracker-mcp
-- PyPI: https://pypi.org/project/meok-omnibus-tracker-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `generate_compliance_update`
+Generate compliance update memo for leadership, covering Omnibus impact,
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
