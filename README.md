@@ -79,6 +79,8 @@ The Omnibus tracker is free. The full platform is **[councilof.ai](https://counc
 - [`eu-ai-act-compliance-mcp`](https://pypi.org/project/eu-ai-act-compliance-mcp/) — full compliance audit
 - [`meok-attestation-verify`](https://pypi.org/project/meok-attestation-verify/) — verify any MEOK signed cert
 
+> **If this tool helps your compliance workflow, please [star this repo](https://github.com/CSOAI-ORG/meok-omnibus-tracker-mcp/stargazers)** — it helps other teams find it.
+
 ## License
 
 MIT — [MEOK AI Labs](https://meok.ai), 2026.
