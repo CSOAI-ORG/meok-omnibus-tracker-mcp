@@ -4,6 +4,10 @@
 [![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/meok_omnibus_tracker_mcp/)
+[![PyPI](https://img.shields.io/pypi/v/meok-omnibus-tracker-mcp)](https://pypi.org/project/meok-omnibus-tracker-mcp/) [![Python](https://img.shields.io/pypi/pyversions/meok-omnibus-tracker-mcp)](https://pypi.org/project/meok-omnibus-tracker-mcp/)
+
+
+**The live source of truth for the EU AI Act Digital Omnibus delay.**
 
 > EU AI Act + GDPR + DORA Digital Omnibus tracker — track all 8 cliff dates, 14 article changes, an...
 
@@ -47,6 +51,9 @@ npx -y @smithery/cli@latest install meok-omnibus-tracker-mcp --client claude
 - [Full Documentation](https://docs.meok.ai/meok-omnibus-tracker-mcp)
 - [API Reference](https://api.meok.ai)
 - [EU AI Act Compliance Guide](https://councilof.ai/compliance)
+- **Free** — unlimited (this is the lead-magnet MCP)
+- **Pro £199/mo** — signed status attestations + Slack webhook on every official update — [subscribe](https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K)
+- **Enterprise £1,499/mo** — multi-tenant + custom monitoring + SIEM push — [subscribe](https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K)
 
 ## 🛡️ Compliance
 
@@ -89,3 +96,22 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+<!-- mcp-name: io.github.CSOAI-ORG/meok-omnibus-tracker-mcp -->
+
+<!-- meok-moat-footer-v1 -->
+---
+
+## Pairs with MEOK Governance Suite
+
+Build something that touches users? You need compliance. MEOK ships 38 governance MCPs that drop in alongside this tool — EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, FDA SaMD, MDR, Basel, MiFID II, MiCA, COPPA, and more.
+
+```bash
+# One-shot install of the governance pack
+npx meok-setup --pack governance
+```
+
+Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographically signed compliance attestations your auditor verifies independently.
+
+→ Full catalogue: [councilof.ai/catalogue](https://councilof.ai/catalogue)
+→ MEOK AI Labs: [meok.ai](https://meok.ai)
+
