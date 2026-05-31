@@ -1,88 +1,78 @@
-# meok-omnibus-tracker-mcp
+# Meok Omnibus Tracker MCP
 
-**The live source of truth for the EU AI Act Digital Omnibus delay.**
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/meok_omnibus_tracker_mcp/)
 
-Parliament voted 569-45 on 23 March 2026 to delay high-risk AI Act obligations. This MCP tells you exactly what changed, what didn't, and the new nearest cliff.
+> EU AI Act + GDPR + DORA Digital Omnibus tracker — track all 8 cliff dates, 14 article changes, an...
 
-By [MEOK AI Labs](https://meok.ai).
+EU AI Act + GDPR + DORA Digital Omnibus tracker — track all 8 cliff dates, 14 article changes, and the live status of every regulatory delay. By MEOK AI Labs.
 
-## Why this exists
+---
 
-Every compliance team is asking the same three questions this week:
-1. "Did EVERYTHING get pushed to 2027?" (no — see below)
-2. "What's the actual nearest deadline I have to hit?"
-3. "Is the GPAI Code of Practice still in force?" (yes)
-
-This MCP returns the live status per provision so you don't get surprised.
-
-## What changed (TL;DR)
-
-| Provision | Before | After |
-|---|---|---|
-| Article 5 prohibitions | 2 Feb 2025 | **UNCHANGED — LIVE** |
-| Article 4 AI literacy | 2 Feb 2025 | **UNCHANGED — LIVE** |
-| GPAI obligations (Art 51-55) | 2 Aug 2025 | **UNCHANGED — LIVE** |
-| Penalty regime (Art 99) | 2 Aug 2025 | **UNCHANGED — LIVE** |
-| **Watermarking (Art 50)** | 2 Aug 2026 | **2 Nov 2026 ← new nearest cliff** |
-| High-risk Annex III (Art 6-49) | 2 Aug 2026 | **2 Dec 2027** (delayed 16 mo) |
-| High-risk Annex I (products) | 2 Aug 2027 | **2 Aug 2028** (delayed 12 mo) |
-| Article 71 EU database | 2 Aug 2026 | **2 Dec 2027** |
-| Article 73 incident reporting | 2 Aug 2026 | **2 Dec 2027** |
-| Article 27 FRIA | 2 Aug 2026 | **2 Dec 2027** |
-
-**Trilogue is LIVE.** Status will change again as the Council and Commission negotiate. Re-check weekly.
-
-## Tools
-
-- `get_provision_status(provision_key)` — per-provision deep-dive
-- `nearest_deadline(include_related=True)` — what you must hit FIRST (includes DORA / NIS2 BSI / Belgian audit deadlines that compliance teams confuse for AI Act)
-- `what_changed_summary()` — one-screen executive briefing
-- `sign_status_attestation(entity, audit_date)` — Pro: signed audit-evidence cert that you knew the deadline state on date X
-
-## Install
+## 🚀 Quick Start
 
 ```bash
-pip install meok-omnibus-tracker-mcp
+# Install via pip
+pip install meok_omnibus_tracker_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install meok-omnibus-tracker-mcp --client claude
 ```
 
-## Claude Desktop
+## ✨ Features
 
-```json
-{
-  "mcpServers": {
-    "omnibus": { "command": "meok-omnibus-tracker-mcp" }
-  }
-}
-```
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-## Tiers
+## 📖 Documentation
 
-- **Free** — unlimited (this is the lead-magnet MCP)
-- **Pro £199/mo** — signed status attestations + Slack webhook on every official update — [subscribe](https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836)
-- **Enterprise £1,499/mo** — multi-tenant + custom monitoring + SIEM push — [subscribe](https://buy.stripe.com/4gM9AV80kaEG0ZT42k8k837)
+- [Full Documentation](https://docs.meok.ai/meok-omnibus-tracker-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-## Sources
+## 🛡️ Compliance
 
-- European Parliament press release, 23 March 2026 (vote 569-45-23) — https://www.europarl.europa.eu/news/en/press-room/20260323IPR38829/
-- A&O Shearman analysis, "Digital Omnibus on AI: what is really on the table"
-- OneTrust analysis, "How the EU Digital Omnibus reshapes AI Act timelines"
-- Global Policy Watch, "MEPs adopt joint position on Digital Omnibus on AI"
+This MCP server is built with **EU AI Act compliance** built-in:
 
-## Full Compliance Platform
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-The Omnibus tracker is free. The full platform is **[councilof.ai](https://councilof.ai)** — EU AI Act, DORA, NIS2, CRA, CSRD compliance automation from £29/mo.
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-→ **[Get started at councilof.ai](https://councilof.ai)**
+## 🏢 Enterprise
 
-## Related MEOK MCPs
+Need custom development, SLA guarantees, or white-label deployment?
 
-- [`eu-ai-act-compliance-mcp`](https://pypi.org/project/eu-ai-act-compliance-mcp/) — full compliance audit
-- [`meok-attestation-verify`](https://pypi.org/project/meok-attestation-verify/) — verify any MEOK signed cert
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-> **If this tool helps your compliance workflow, please [star this repo](https://github.com/CSOAI-ORG/meok-omnibus-tracker-mcp/stargazers)** — it helps other teams find it.
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-## License
+## 🤝 Part of the MEOK Ecosystem
 
-MIT — [MEOK AI Labs](https://meok.ai), 2026.
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
-<!-- mcp-name: io.github.CSOAI-ORG/meok-omnibus-tracker-mcp -->
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
+
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
+---
+
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
