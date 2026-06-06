@@ -1,0 +1,28 @@
+# Meok Omnibus Tracker MCP
+
+> EU AI Act + GDPR + DORA Digital Omnibus tracker — track all 8 cliff dates, 14 article changes, an...
+
+`meok-omnibus-tracker-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install meok-omnibus-tracker-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx meok-omnibus-tracker-mcp
+```
+
+## Tools
+
+See the package README for the full tool list: https://pypi.org/project/meok-omnibus-tracker-mcp/
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/meok-omnibus-tracker-mcp
+- PyPI: https://pypi.org/project/meok-omnibus-tracker-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
