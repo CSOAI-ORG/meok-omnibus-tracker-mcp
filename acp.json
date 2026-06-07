@@ -1,0 +1,21 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "meok-omnibus-tracker-mcp",
+    "description": "EU Digital Omnibus AI Act tracker - Track delay status by article. First-mover advantage for SEO + b",
+    "version": "1.1.4",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "meok-omnibus-tracker-mcp"
+      }
+    ],
+    "capabilities": [
+      "query_article",
+      "get_trilogue_status",
+      "generate_compliance_update"
+    ]
+  }
+}
