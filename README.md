@@ -1,3 +1,5 @@
+[![MCP Scorecard: 74/100](https://img.shields.io/badge/proofof.ai-74%2F100-5b21b6)](https://proofof.ai/scorecard/meok-omnibus-tracker-mcp.html)
+
 # Meok Omnibus Tracker MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
