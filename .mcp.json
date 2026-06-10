@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "meok-omnibus-tracker-mcp": {
+      "command": "uvx",
+      "args": [
+        "meok-omnibus-tracker-mcp"
+      ]
+    }
+  }
+}
