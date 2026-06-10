@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "meok-omnibus-tracker-mcp"
-version = "1.1.4"
+version = "1.1.5"
 requires-python = ">=3.10"
 description = "EU Digital Omnibus AI Act tracker - Track delay status by article. First-mover advantage for SEO + brand."
 keywords = ["mcp", "model-context-protocol", "mcp-server", "claude", "anthropic", "agent", "meok", "meok-ai-labs", "ai", "eu-ai-act", "digital-omnibus", "compliance"]
