@@ -54,8 +54,8 @@ npx -y @smithery/cli@latest install meok-omnibus-tracker-mcp --client claude
 - [API Reference](https://api.meok.ai)
 - [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 - **Free** — unlimited (this is the lead-magnet MCP)
-- **Pro £199/mo** — signed status attestations + Slack webhook on every official update — [subscribe](https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j)
-- **Enterprise £1,499/mo** — multi-tenant + custom monitoring + SIEM push — [subscribe](https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j)
+- **Pro £199/mo** — signed status attestations + Slack webhook on every official update — [subscribe](https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t)
+- **Enterprise £1,499/mo** — multi-tenant + custom monitoring + SIEM push — [subscribe](https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t)
 
 ## 🛡️ Compliance
 

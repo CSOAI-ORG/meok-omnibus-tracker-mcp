@@ -47,12 +47,19 @@ except ImportError:
 
 
 def check_access(api_key: str = ""):
+    # 2026-06-12 PM22: wire /verify call site (fail-open)
+    try:
+        _meter = _server_meter_check("omnibus_tracker")
+        if not _meter.get("allowed", True):
+            return False, "Free tier limit reached. Upgrade to Pro at https://csoai.org", "free"
+    except Exception:
+        pass  # fail-open
     return _shared_check_access(api_key)
 
 
-FREE_DAILY_LIMIT = 10
+FREE_DAILY_LIMIT = 50
 _usage: dict[str, list[datetime]] = defaultdict(list)
-STRIPE_199 = "https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j"
+STRIPE_199 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
 
 
 def _rl(tier="free") -> Optional[str]:
@@ -266,7 +273,7 @@ if __name__ == "__main__":
 # ── MEOK monetization layer (Stripe upgrade · PAYG · pricing) ──────────
 # Free tier is zero-config. Upgrade to Pro (unlimited) or pay-as-you-go per call.
 import os as _meok_os
-MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j"  # Pro (unlimited)
+MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"  # Pro (unlimited)
 MEOK_PAYG_KEY = _meok_os.environ.get("MEOK_PAYG_KEY", "")  # set to enable PAYG (x402 / ~GBP0.05 per call)
 MEOK_PRICING = "https://meok.ai/pricing"
 
@@ -278,3 +285,31 @@ def meok_upsell(tier: str = "free") -> dict:
     return {"upgrade_url": MEOK_STRIPE_UPGRADE,
             "payg_enabled": bool(MEOK_PAYG_KEY),
             "pricing": MEOK_PRICING}
+
+
+# ── MEOK metering wire (server-side, fail-open) ──────────────────────────
+# Posts to meok-attestation-api /verify with {api_key, tool}. Returns metering
+# status (allowed/tier/remaining). Fail-open if KV not configured or endpoint
+# unreachable. Wired in 2026-06-12 to close the "8 compliance packages POST to
+# /verify" ungrounded claim. Uses the top-level _MEOK_API_KEY (declared at the
+# top of the file when present).
+import urllib.request as _meok_urlreq
+import urllib.error as _meok_urlerr
+import json as _meok_json
+import os as _meok_os
+_MEOK_VERIFY_URL = "https://meok-attestation-api.vercel.app/verify"
+_MEOK_API_KEY = _meok_os.environ.get("MEOK_API_KEY", "")
+
+def _server_meter_check(tool: str) -> dict:
+    """POST {api_key, tool} to /verify. Returns metering dict. Fail-open."""
+    if not _MEOK_API_KEY:
+        return {"allowed": True, "tier": "anon", "note": "MEOK_API_KEY not set; metering skipped"}
+    try:
+        body = _meok_json.dumps({"api_key": _MEOK_API_KEY, "tool": tool}).encode()
+        req = _meok_urlreq.Request(_MEOK_VERIFY_URL, data=body,
+            headers={"Content-Type": "application/json"}, method="POST")
+        with _meok_urlreq.urlopen(req, timeout=4) as r:
+            return _meok_json.loads(r.read())
+    except (_meok_urlerr.URLError, _meok_urlerr.HTTPError, TimeoutError, ValueError) as e:
+        # Fail-open: never break the tool on a metering failure
+        return {"allowed": True, "tier": "unknown", "note": f"metering failed (fail-open): {e}"}
