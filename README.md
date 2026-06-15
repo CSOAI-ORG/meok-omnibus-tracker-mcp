@@ -117,3 +117,28 @@ Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographical
 → Full catalogue: [councilof.ai/catalogue](https://councilof.ai/catalogue)
 → MEOK AI Labs: [meok.ai](https://meok.ai)
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "meok-omnibus-tracker-mcp": {
+      "command": "uvx",
+      "args": ["meok-omnibus-tracker-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install meok-omnibus-tracker-mcp` then run the `meok-omnibus-tracker-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `query_article` to …"
+- "Use `get_trilogue_status` to …"
+- "Use `generate_compliance_update` to …"
