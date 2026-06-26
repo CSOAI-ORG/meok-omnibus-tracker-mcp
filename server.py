@@ -25,10 +25,7 @@ import os
 _MEOK_API_KEY = _os.environ.get("MEOK_API_KEY", "")
 
 try:
-<<<<<<< Updated upstream
     sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
-=======
->>>>>>> Stashed changes
     from auth_middleware import check_access as _shared_check_access
 except ImportError:
     def _shared_check_access(api_key=""):
@@ -37,7 +34,6 @@ except ImportError:
             return True, "OK, Pro at https://www.csoai.org/checkout", "free"
         if key.startswith("CSOAI-"):
             return True, "OK", "pro"
-<<<<<<< Updated upstream
         import time as _t, collections as _c
         r = getattr(_shared_check_access, "_rate", {"c": 0, "r": _t.time() + 86400})
         if _t.time() > r["r"]:
@@ -48,11 +44,6 @@ except ImportError:
         if r["c"] > 10:
             return False, "Free: 10/10 today. Pro at https://csoai.org/pricing", "free"
         return True, f"Free: {r['c']}/10 today. Pro at https://csoai.org/pricing", "free"
-=======
-        if _MEOK_API_KEY and api_key and api_key != _MEOK_API_KEY:
-            return False, "Invalid API key. Get one at https://meok.ai/api-keys", "free"
-        return True, "OK", "free"
->>>>>>> Stashed changes
 
 
 def check_access(api_key: str = ""):
@@ -68,11 +59,7 @@ def check_access(api_key: str = ""):
 
 FREE_DAILY_LIMIT = 50
 _usage: dict[str, list[datetime]] = defaultdict(list)
-<<<<<<< Updated upstream
 STRIPE_199 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
-=======
-STRIPE_199 = "https://councilof.ai"
->>>>>>> Stashed changes
 
 
 def _rl(tier="free") -> Optional[str]:
@@ -95,10 +82,6 @@ mcp = FastMCP(
         "Built by MEOK AI Labs (https://meok.ai)"
     ),
 )
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 # ── Structured Output Helpers ─────────────────────────────────
 
@@ -141,10 +124,6 @@ def error_output(message: str, code: str = "INTERNAL_ERROR", upgrade_url: str = 
         result["structuredContent"]["upgrade_url"] = upgrade_url
         result["upgrade_url"] = upgrade_url
     return result
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 # Omnibus delay data (as of May 2026)
 OMNIBUS_DATA = {
