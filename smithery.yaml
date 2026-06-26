@@ -3,7 +3,7 @@ description: 'MCP server: meok-omnibus-tracker-mcp'
 version: 1.0.5
 author: MEOK AI Labs
 homepage: https://safetyof.ai
-repository: https://github.com/MEOK-AI-Labs/meok-omnibus-tracker-mcp
+repository: https://github.com/CSOAI-ORG/meok-omnibus-tracker-mcp
 license: MIT
 categories:
 - compliance
